@@ -34,6 +34,9 @@ header.header-area {
         }
         .nav-brand {
             font: normal 700 1.1rem var(--font-mont);
+            img {
+                height: 65px;
+            }
         }
         .form-group {
             background: var(--light);
@@ -55,4 +58,43 @@ header.header-area {
             }
         }
     }
+}
+
+/* BREAKPOINTS
+    sm      : 576px,
+    md      : 768px,
+    lg      : 992px,
+    xl      : 1200px    
+*/
+/* Responsive toggle menu */
+@include from(lg){
+    header.header-area{
+        height: 95px;
+        background: var(--dark);
+        transition: height .5s ease;
+        overflow-y: hidden;
+        .nav {
+            flex-wrap: wrap;
+            height: 70px;
+            .toggle-button {
+                display: block!important;
+            }
+            .collapse, .navbar-nav {
+                flex-direction: column;
+                margin: auto;
+                text-align: center;
+            }
+            .form-group {
+                display: inline-block;
+                margin: 2% 0;
+            }
+            .nav-link {
+                padding: 10px 0!important;
+            }
+
+        }
+    }
+}
+.nav-collapse {
+    height: 24rem!important;
 }

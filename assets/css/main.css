@@ -489,6 +489,8 @@ header.header-area .nav {
     width: 100%; }
   header.header-area .nav .nav-brand {
     font: normal 700 1.1rem var(--font-mont); }
+    header.header-area .nav .nav-brand img {
+      height: 65px; }
   header.header-area .nav .form-group {
     background: var(--light);
     -webkit-box-shadow: var(--box-shadow);
@@ -507,6 +509,43 @@ header.header-area .nav {
     transition: background .5s ease; }
     header.header-area .nav button.btn.btn-submit:hover {
       background: var(--primary-color); }
+
+/* BREAKPOINTS
+    sm      : 576px,
+    md      : 768px,
+    lg      : 992px,
+    xl      : 1200px    
+*/
+/* Responsive toggle menu */
+@media screen and (max-width: 992px) {
+  header.header-area {
+    height: 95px;
+    background: var(--dark);
+    -webkit-transition: height .5s ease;
+    -o-transition: height .5s ease;
+    transition: height .5s ease;
+    overflow-y: hidden; }
+    header.header-area .nav {
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      height: 70px; }
+      header.header-area .nav .toggle-button {
+        display: block !important; }
+      header.header-area .nav .collapse, header.header-area .nav .navbar-nav {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        margin: auto;
+        text-align: center; }
+      header.header-area .nav .form-group {
+        display: inline-block;
+        margin: 2% 0; }
+      header.header-area .nav .nav-link {
+        padding: 10px 0 !important; } }
+
+.nav-collapse {
+  height: 24rem !important; }
 
 html, body {
   height: 100%;
