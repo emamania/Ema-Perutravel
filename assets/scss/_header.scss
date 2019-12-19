@@ -1,0 +1,58 @@
+header.header-area {
+    .nav {
+        display: flex;
+        flex-direction: row;
+        .toggle-button {
+            margin-left: auto;
+            display: none;
+            border: 1px solid var(--light);
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            padding: .1rem 1rem;
+            border-radius: 5px;
+            box-shadow: var(--box-shadow);
+            cursor: pointer;
+            &:hover {
+                color: var(--gray);
+            }
+        }
+        .navbar-nav {
+            display: flex;
+            list-style-type: none;
+            flex-direction: row;
+            .nav-link {
+                padding: 0 1vw;
+                .link:hover {
+                    color: var(--primary-color);
+                }
+            }
+        }
+        .collapse {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+        }
+        .nav-brand {
+            font: normal 700 1.1rem var(--font-mont);
+        }
+        .form-group {
+            background: var(--light);
+            box-shadow: var(--box-shadow);
+        }
+        .input-control {
+            border: none;
+            padding: .6rem 1rem;
+            background: transparent;
+            font: normal 300 .9rem var(--font-Rale);
+        }
+        button.btn.btn-submit {
+            border: none;
+            padding: .8rem 1rem;
+            cursor: pointer;
+            transition: background .5s ease;
+            &:hover {
+                background: var(--primary-color);
+            }
+        }
+    }
+}
