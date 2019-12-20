@@ -11,55 +11,52 @@
     //background: lightblue;
 
     /* BREAKPOINTS
-        sm      : 576px,
+        sm      : 520px,
         md      : 768px,
-        lg      : 992px,
-        xl      : 1200px    
+        lg      : 1262px,
+        xl      : 1424px 
     */
     @include fromin(sm){
-        max-width: 540px;
+        max-width: 480px;
     }
     @include fromin(md){
-        max-width: 720px; 
+        max-width: 720px;
     }
     @include fromin(lg){
-        max-width: 960px;
+        max-width: 1224px;
     }
     @include fromin(xl){
-        max-width: 1140px;
+        max-width: 1392px;
     }
 }
 
 .container-fluid {
     width: 100%;
-    padding: 15px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.container {
-    /* GRID SISTEM */
-    .row {
-        & div {
-            border: 1px solid var(--gray);
-        }
-        display: flex;
-        flex-flow: row wrap;
+
+/* GRID SISTEM */
+.row {
+    & div {
+        //border: 1px solid var(--gray);
+    }
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    height: 100%;
+    .col-1, .col-2, .col-3,
+    .col-4, .col-5, .col-6,
+    .col-7, .col-8, .col-9,
+    .col-10, .col-11, .col-12
+    .col, [class*="col"] {
         width: 100%;
         height: 100%;
-        .col-1, .col-2, .col-3,
-        .col-4, .col-5, .col-6,
-        .col-7, .col-8, .col-9,
-        .col-10, .col-11, .col-12
-        .col, [class*="col"] {
-            width: 100%;
-            height: 100%;
-            max-width: 100%;
-            padding-left: 15px;
-            padding-right: 15px;
-        }
+        max-width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
     }
-
 }
 
 

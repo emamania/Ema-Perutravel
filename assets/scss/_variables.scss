@@ -42,10 +42,10 @@
 
 /* variables */
 $breakpoints: (
-    sm      : 576px,
+    sm      : 520px,
     md      : 768px,
-    lg      : 992px,
-    xl      : 1200px
+    lg      : 1224px,
+    xl      : 1424px
 );
 @mixin fromin($bp) {
    @if map-has-key($breakpoints, $bp ){
