@@ -21,6 +21,13 @@
     --box-shadow2:          0 .5rem 1.5rem #0d2e2e23;
     --box-shadow3:          0 .3rem 4rem #252c2c2f;
 }
+:root {
+    --z-back: -10;
+    --z-normal: 1;
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    --z-modal: 1000;
+}
 
 /* Font Family */
 @font-face{
