@@ -40,28 +40,10 @@ header.header-area {
             img {
                 height: 65px;
             }
-        }
-        .form-group {
-            background: var(--light);
-            box-shadow: var(--box-shadow);
-        }
-        .input-control {
-            border: none;
-            padding: .6rem 1rem;
-            background: transparent;
-            font: normal 300 .9rem var(--font-Rale);
-        }
-        button.btn.btn-submit {
-            border: none;
-            padding: .8rem 1rem;
-            cursor: pointer;
-            transition: background .5s ease;
-            &:hover {
-                background: var(--primary-color);
-            }
-        }
+        }        
     }
 }
+
 
 /* BREAKPOINTS
     sm      : 576px,

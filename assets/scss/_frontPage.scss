@@ -61,19 +61,19 @@
 	h2 {
 		color: var(--primary-color);
 		text-transform: uppercase;
-		margin: 2rem;
+		margin: 0 0 1.5rem 0;
 	}
 }
+
 .main-area {
 	background: #fff;
-
 	/* CONTENT AREA */
 	.packages_tours {
-		margin: 0 5%;
+		p {
+			font: normal 1rem var(--font-Rale);
+		}
 		.article {
 			position: relative;
-			margin-bottom: 2rem;
-			//padding-bottom: 2rem;
 			width: auto;
 			a{display: block;}
 		}
@@ -110,4 +110,26 @@
 			}
 		}
 	}
+	
+	.catour {
+		.pack {
+			background: var(--light);
+			box-shadow: var(--box-shadow3);
+			border-radius: 3px;
+			img {
+				display: block;
+				border-top-left-radius: 3px;
+				border-top-right-radius: 3px;
+				width: 100%;
+			}
+			&-body {
+				padding: .5rem;
+				h3 {
+					margin: 0;
+				}
+			}
+		}
+	}
+	/* SIDEBAR */
+	
 }

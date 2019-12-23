@@ -2,132 +2,70 @@
 ::before, ::after {
     box-sizing: border-box;
 }
-
-.container {
-    width: 100%;
-    padding: 15px;
-    margin-left: auto;
-    margin-right: auto;
-    //background: lightblue;
-
-    /* BREAKPOINTS
-        sm      : 520px,
-        md      : 768px,
-        lg      : 1262px,
-        xl      : 1424px 
-    */
-    @include fromin(sm){
-        max-width: 480px;
-    }
-    @include fromin(md){
-        max-width: 720px;
-    }
-    @include fromin(lg){
-        max-width: 1224px;
-    }
-    @include fromin(xl){
-        max-width: 1392px;
+:root {
+    --gap          : 1rem;
+    @include fromin(md) {
+        --gap       : 1.5rem;        
     }
 }
+.emagrid {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-gap: var(--gap);
+    width: calc(100% - 2rem);
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding: 15px 0;
+    max-width: 1124px;
+    & &, &-full {
+       width: 100%;
+       max-width: 100%;
+       margin-right: 0;
+       margin-left: 0;
+    }
 
-.container-fluid {
-    width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
 
 
-/* GRID SISTEM */
-.row {
-    & div {
-        //border: 1px solid var(--gray);
+//Anchos personalizables hasta 1024px
+@for $i from 1 through 12 {
+    $reta: $i - 1;
+    .sm-grid-#{$i} {
+       grid-template-columns: repeat(#{$i}, calc((100% - var(--gap) * #{$reta}) / #{$i}));
     }
-    display: flex;
-    flex-flow: row wrap;
-    width: 100%;
-    height: 100%;
-    .col-1, .col-2, .col-3,
-    .col-4, .col-5, .col-6,
-    .col-7, .col-8, .col-9,
-    .col-10, .col-11, .col-12
-    .col, [class*="col"] {
+    .sm-cols-#{$i}{
+       grid-column-end: span #{$i};
+    }
+}
+@include fromin(md) {
+    @for $i from 1 through 12 {
+        $reta: $i - 1;
+        .md-grid-#{$i} {
+            grid-template-columns: repeat(#{$i}, calc((100% - var(--gap) * #{$reta}) / #{$i}));
+        }
+        .md-cols-#{$i}{
+            grid-column-end: span #{$i};
+        }
+    }
+}
+
+@include fromin (lg) { 
+    @for $i from 1 through 12 {
+       $reta: $i - 1;
+       .lg-grid-#{$i} {
+          grid-template-columns: repeat(#{$i}, calc((100% - var(--gap) * #{$reta}) / #{$i}));
+       }
+       .lg-cols-#{$i}{
+          grid-column-end: span #{$i};
+       }
+    }
+}
+@include fromin (xl) {
+    .emagrid {
         width: 100%;
-        height: 100%;
-        max-width: 100%;
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-}
-
-
-/* 
-    Number of Columns = 12,
-    column space = (column width / space)
-    50% = (100% / 12)
-
-    12/12 = 1 column
-    12/6 = 2 column
-    12/4 = 3 column
-
-    sm
-    md
-    lg
-    xl
-*/
-.row {
-    /* .col-1 {
-        flex: 0 0 calc(100%/12);
-    }
-    .col-2 {
-        flex: 0 0 calc(100%/6);
-    } */
-    
-    @for $i from 1 through 12 {
-        & .col-#{$i} {
-           flex: 0 0 calc(100% / (12/#{$i}));
-           width: 111px;
-        }
-    }    
-}
-/* BREAKPOINTS
-    sm      : 576px,
-    md      : 768px,
-    lg      : 992px,
-    xl      : 1200px    
-*/
-@include fromin(sm){
-    @for $i from 1 through 12 {
-        .row {
-            .cols-sm-#{$i} {
-                flex: 0 0 calc(100% / (12/#{$i}));
-            }
-        }
-    }
-}
-@include fromin(md){
-    @for $i from 1 through 12 {
-        .row {
-            .cols-md-#{$i} {
-                flex: 0 0 calc(100% / (12/#{$i}));
-            }
-        }
-    }
-}
-@include fromin(lg){
-    @for $i from 1 through 12 {
-        .row {
-            .cols-lg-#{$i} {
-                flex: 0 0 calc(100% / (12/#{$i}));
-            }
-        }
-    }
-}
-@include fromin(xl){
-    @for $i from 1 through 12 {
-        .row {
-            .cols-xl-#{$i} {
-                flex: 0 0 calc(100% / (12/#{$i}));
-            }
-        }
+        margin-left: auto;
+        margin-right: auto;
     }
 }

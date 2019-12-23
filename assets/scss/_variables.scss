@@ -44,8 +44,8 @@
 $breakpoints: (
     sm      : 520px,
     md      : 768px,
-    lg      : 1224px,
-    xl      : 1424px
+    lg      : 1124px,
+    xl      : 1424px 
 );
 @mixin fromin($bp) {
    @if map-has-key($breakpoints, $bp ){
