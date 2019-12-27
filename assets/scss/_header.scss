@@ -5,6 +5,7 @@ header.header-area {
     .nav {
         display: flex;
         flex-direction: row;
+        //align-items: center;
         .toggle-button {
             margin-left: auto;
             display: none;
@@ -19,14 +20,43 @@ header.header-area {
                 color: var(--gray);
             }
         }
-        .navbar-nav {
+        .navbar-nav {//ul
+            margin: 0;
+            padding-left: 1rem;
             display: flex;
             list-style-type: none;
             flex-direction: row;
-            .nav-link {
-                padding: 0 1vw;
-                .link:hover {
-                    color: var(--primary-color);
+            justify-content: space-between;
+            .nav-link {//li
+                text-align: center;
+                transition: background .4s ease;
+                //padding: .5rem 1vw;
+                .link {
+                    display: block;
+                    padding: .5rem 1vw;
+                }
+                &:hover {
+                    background: var(--primary-color);
+                }
+                .subnavbar-nav {//ul
+                    margin: 0;
+                    padding: 0;
+                    background: var(--yellow);
+                    
+                    li {
+                        list-style: none;
+                        a {
+                            display: block;
+                            padding: .5rem 1vw;
+                            color: var(--primary-color);
+                            &:hover {
+                                color: var(--light);
+                            }
+                        }
+                        &:hover {
+                            background: var(--primary-color_alt);
+                        }
+                    }
                 }
             }
         }

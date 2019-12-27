@@ -20,17 +20,18 @@
 		bottom: 2rem;
 		width: 100%;
 		font: normal 800 1.5rem/1rem var(--font-mont);
+		z-index: var(--z-fixed);
 	}
 }
 
 /* MOVIE AREA */
+.overlay {
+	background: #000;
+	display: block;
+	opacity: 1;//.8
+}
 .movie{
 	position: relative;
-	.overlay {
-		background: #000;
-		display: block;
-		opacity: .8;
-	}
 	video.video-agencia {
 		height: 100vh;
 		width: 100%;
@@ -62,7 +63,7 @@
 		h1, h2, p {			
 			display: block;
 			width: 100%;
-			text-align: center;
+			//text-align: center;
 		}
 	}
 }
@@ -89,10 +90,17 @@
 		margin: 0 auto;
 		h1 {
 			font-size: 2.2rem;
+			margin-bottom: 1rem;
+			margin-top: 0;
 		}
-		p {line-height: 1.5rem;font-weight: normal;}
+		p {line-height: 1.5rem;font-weight: normal;margin-bottom: 0;}
 	}
 	.packages_tours {
+		position: relative;
+		top: -3rem;
+		/* .front {
+			background: #fff;
+		} */
 		.grid {
 			/* column-count: 2;
 				*/
@@ -144,6 +152,7 @@
 .categ {
 	background: var(--yellow);
 }
+
 .catour {
 	.pack {
 		background: var(--light);
@@ -162,6 +171,10 @@
 			}
 		}
 	}
+}
+
+.blog {
+	background: #fff;
 }
 /* SIDEBAR */
 .adds, .trip {
@@ -333,6 +346,18 @@
 }
 
 /* FOOTER */
+.footer-ico {
+	background: #fff;
+	width: 100%;
+	.footer-img {
+		height: 198px;
+		background-image: url(/assets/images/footer-ima.png);
+		background-position: center!important;
+		background-repeat: no-repeat!important;
+		background-size: cover;
+		width: 100%;
+	}
+}
 footer {
 	font-size: .86rem;
 	background: var(--primary-color);
