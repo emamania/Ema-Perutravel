@@ -1,6 +1,10 @@
 a {
     text-decoration: none;
 }
+p {
+    line-height: 1.5rem;
+    font-weight: normal;
+}
 
 .fluid {
     width: 100%;
@@ -61,7 +65,7 @@ a {
 }
 
 .text-lg {
-    font: normal bold 2rem/1.8rem var(--font-mont );
+    font: normal bold 2rem/1.8rem var(--font-Rale );
 }
 
 .uppercase {
@@ -134,10 +138,15 @@ a {
     background: transparent;
     font: normal 300 .9rem var(--font-Rale);
 }
-.btn-submit {
-    border: none;
+.btn {
     padding: .8rem 1rem;
     cursor: pointer;
+    &-arti {
+        background: var(--primary-color);        
+    }
+}
+.btn-submit {
+    border: none;    
     transition: background .5s ease;
     &:hover {
         background: var(--primary-color);
@@ -155,7 +164,7 @@ a {
     box-shadow: 0px 7px 15px -5px rgba(0, 0, 0, 0.67);
     transition: background .5s ease;
     .fas-youtube {
-        background: url(/assets/images/youtube.svg) no-repeat;
+        background: url(../images/youtube.svg) no-repeat;
         display: block;
         height: 27px;
         width: 27px;

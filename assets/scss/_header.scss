@@ -2,7 +2,14 @@ header.header-area {
     width: 100%;
     position: absolute;
     z-index: var(--z-normal);
-    top: 55px;
+    top: 10px;
+    @include fromin(961px) {
+        top: 50px;
+        background: linear-gradient(to bottom, #00000059, #ffffff00);
+    }
+    .emagrid {
+        padding: 0;
+    }
     .nav {
         display: flex;
         flex-direction: row;
@@ -17,6 +24,7 @@ header.header-area {
             border-radius: 5px;
             box-shadow: var(--box-shadow);
             cursor: pointer;
+            height: 42px;
             &:hover {
                 color: var(--gray);
             }
@@ -28,10 +36,14 @@ header.header-area {
             list-style-type: none;
             flex-direction: row;
             justify-content: space-between;
+            height: 35px;
             .nav-link {//li
                 text-align: center;
                 transition: background .4s ease;
                 //padding: .5rem 1vw;
+                &:nth-child(5) {
+                    width: 170px;
+                }
                 .link {
                     display: block;
                     padding: .5rem 1vw;
@@ -60,7 +72,7 @@ header.header-area {
                         }
                         &:hover {
                             background: var(--primary-color_alt);
-                        }
+                        }                        
                     }
                 }
             }
@@ -69,9 +81,13 @@ header.header-area {
             display: flex;
             flex-direction: row;
             width: 100%;
+            justify-content: flex-end;
+            align-items: center;
         }
         .nav-brand {
             font: normal 700 1.1rem var(--font-mont);
+            height: 55px;
+            overflow: hidden;
             img {
                 height: 65px;
             }
@@ -89,7 +105,7 @@ header.header-area {
 /* Responsive toggle menu */
 @include from(lg){
     header.header-area{
-        height: 95px;
+        height: 55px;
         //background: var(--dark);
         transition: height .5s ease;
         overflow-y: hidden;

@@ -15,7 +15,8 @@
 
     /* Font Family */
     --font-mont:            'Mont', cursive;
-    --font-Rale:            'Rale', cursive;
+    --font-Rale1:            'Rale', cursive;
+    --font-Rale:           'Raleway', cursive;
 
     /* Border Colors */
     --box-shadow:           0 0 1.2rem #090a0a7a;
@@ -36,6 +37,10 @@
     src: url(../../vendor/fonts/Montserrat/Montserrat-Regular.ttf);
 }
 
+@font-face {
+    font-family: 'Raleway', sans-serif;
+    @import url('https://fonts.googleapis.com/css?family=Raleway:400,500,700,900&display=swap');
+}
 @font-face{
     font-family: 'Rale';
     src: url(../../vendor/fonts/Raleway/Raleway-Regular.ttf);

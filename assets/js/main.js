@@ -27,10 +27,5 @@ $.getJSON(url, function (data) {
             '</div>'
         );
 
-        
-        
-        //console.log(k, data.items[k]["id"].videoId);
-        //$('#tabla tr:last').after('<tr>'+tituloVideo+'</tr><tr>'+urlVideo+'</tr><tr>'+fechaVideo+'</tr>');
-        //$("#moviey").append('<tr><td>'+tituloVideo+'</td><td>'+urlVideo+'</td></tr>');
     }
 });
