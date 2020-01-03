@@ -103,7 +103,7 @@ body {
 	}
 	.packages_tours {
 		position: relative;
-		top: -3rem;
+		top: -7rem;
 		/* .front {
 			background: #fff;
 		} */
@@ -128,6 +128,7 @@ body {
 			border-radius: 2px;
 			&:hover {
 				box-shadow: none;
+				transform: scale(1.03);
 			}
 			a{
 				display: block;
@@ -139,12 +140,14 @@ body {
 				}
 			}
 			h2 {
-				//width: 90%;
+				color: #fff;
 				padding: 0 .5rem;
 				bottom: 1rem;
 				position: absolute;
 				margin: 0;
 				text-align: center;
+				text-shadow: var(--text-shadow);
+				width: 100%;
 				//text-align: $!V0lunt3ring!$;
 				a {
 					color: var(--light);
@@ -312,6 +315,7 @@ body {
 }
 
 .map {
+	background: #fff;
 	iframe{display: block;}
 	.block {
 		margin-bottom: 0;
@@ -366,14 +370,14 @@ body {
 				}
 			}
 			&:nth-child(4) a {
-				background-position: 350px 0;
+				background-position: 370px 0;
 				width: 120px;
 				@include fromin(md) {
 					background-position: 580px 0;
 				}
 			}
 			&:nth-child(5) a {
-				background-position: -375px 0;
+				background-position: -360px 0;
 				width: 120px;
 				@include fromin(md) {
 					background-position: 430px 0;
@@ -429,6 +433,9 @@ footer {
 	font-size: .86rem;
 	background: var(--primary-color);
 	padding: 1.5rem 0 0;
+	& > .block {
+		margin: 0;
+	}
 	h3 {
 		color:#f3f3cd;
 		border-bottom: .1em solid #86ab42;

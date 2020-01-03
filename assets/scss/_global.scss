@@ -1,3 +1,17 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font: normal 500 1rem var(--font-1);
+    background: var(--dark);
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
 a {
     text-decoration: none;
 }
@@ -58,14 +72,14 @@ p {
 }
 
 .text-sm {
-    font: normal 700 .9rem var(--font-Rale);
+    font: normal 700 .9rem var(--font-1);
 }
 .text-md {
-    font: normal 700 1.2rem/1.4rem var(--font-Rale);
+    font: normal 700 1.2rem/1.4rem var(--font-1);
 }
 
 .text-lg {
-    font: normal bold 2rem/1.8rem var(--font-Rale );
+    font: normal bold 2rem/1.8rem var(--font-1);
 }
 
 .uppercase {
@@ -93,7 +107,7 @@ p {
 }
 
 .p-para {
-    font: normal 200 1rem var(--font-Rale);
+    font: normal 200 1rem var(--font-1);
     margin: 0;
     margin-bottom: 1rem;
     color: var(--gray);
@@ -136,7 +150,7 @@ p {
     border: none;
     padding: .6rem 1rem;
     background: transparent;
-    font: normal 300 .9rem var(--font-Rale);
+    font: normal 300 .9rem var(--font-1);
 }
 .btn {
     padding: .8rem 1rem;
