@@ -14,9 +14,21 @@ header.header-area {
     .nav {
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
         //align-items: center;
+        .whatsnav {
+            display: block;
+            cursor: pointer;
+            img {
+                display: block;
+                height: 42px;
+            }
+            @include fromin(961px) {
+                display: none;
+            }
+        }
         .toggle-button {
-            margin-left: auto;
+            //margin-left: auto;
             display: none;
             border: 1px solid var(--light);
             color: var(--primary-color);
@@ -348,3 +360,61 @@ header.header-area {
     background-position: 273px 25px;
     width: 25px;
 }
+
+.grid-contactanos {
+    display: none;
+    position: fixed;
+    bottom: -5px;
+    right: 0;
+    width: 100%;
+    div {
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        margin-bottom: 5px;
+        box-shadow: 0px 2px 13px rgba(0, 0, 0, 0.5);
+    }
+    .messenger {
+        background: #0084ff;
+        position: fixed;
+        bottom: 64px;
+        right: 30px;
+    }
+    a {
+        display: block;
+        color: #fff;
+        .whatsapp {
+            background: #2bad22;
+            border-radius: 30px;
+            position: relative;
+            text-align: center;
+            bottom: 1rem;
+            padding: 5px 0px;
+            width: 97%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            &:active {
+                height: 45px;
+            }
+            img {
+                max-width: 42px;
+                width: 10%;
+                margin-right: 10px;
+                span {
+                    font-size: 1.20rem;
+                    @include fromin(360px){
+                        font-size: 1.35rem;
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (min-device-width: 280px) and (max-device-width: 680px) {
+    .grid-contactanos {
+        display: block !important;
+    }
+}
+

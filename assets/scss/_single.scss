@@ -52,32 +52,40 @@
             }
         }
     }
-    .adds {
-        margin: 0;
-    }
-    .sidebarTours {
-        position: relative;
-        background: var(--border);
-        
+    .sidebar {
         h2, h3 {
             background: var(--primary-color);
             color: var(--light);
             padding: .3em 1.5em;
             margin-bottom: 0.5rem;
             font-size: 1rem;
+            &:first-child {
+                margin-top: 0;
+            }
         }
-        ul {
-            padding: 0 .3rem;
-            li {
-                margin-left: 15px;
-                list-style-image: url(../images/icon-list.gif);
-                padding-bottom: .5rem;
-                a {
-                    font-size: .9rem;
-                    color: #4c6590;
-                    text-align: justify;
-                    &:hover {
-                        color: var(--second-color);
+        .embed-responsive {
+            margin-top: -.5rem;
+        }
+        .adds {
+            margin: 0;
+        }
+        .sidebarTours {
+            position: relative;
+            background: var(--border);        
+            margin-bottom: 1.2rem;
+            ul {
+                padding: 0 .3rem;
+                li {
+                    margin-left: 15px;
+                    list-style-image: url(../images/icon-list.gif);
+                    padding-bottom: .5rem;
+                    a {
+                        font-size: .9rem;
+                        color: #4c6590;
+                        text-align: justify;
+                        &:hover {
+                            color: var(--second-color);
+                        }
                     }
                 }
             }
@@ -173,6 +181,7 @@
         }
         img {
             display: inline-block;
+            float: left;
             width: 50%;
             height: 100%;
             border-radius: 3px;
@@ -180,4 +189,18 @@
         }
         br{display: block;}
     }
+    img.right {
+        float: right;
+        width: 50%;
+        margin-left: 1rem;
+        margin-bottom: 1rem;
+    }
+    .clear {
+        clear: both;
+        display: block;
+        width: 0;
+        height: 0;
+        overflow: hidden;
+        visibility: hidden;
+    }    
 }
