@@ -87,7 +87,25 @@ body {
     	font-weight: normal;
 	}
 }
-
+.sharebar {
+	position: absolute;
+	left: 10px;
+	position: fixed;
+	top: 425px;
+	.sharebar-links  {
+		padding: .8rem .4rem .8rem .8rem;
+		background: #FFF;
+		border-top-left-radius: 5px;
+		border-bottom-left-radius: 5px;
+		box-shadow: 0px 2px 4px #9d9d4e70;
+		ul {
+			li {
+				list-style: none;
+				margin-bottom: .5rem;
+			}
+		}
+	}
+}
 .main-area {
 	background: #fff;
 	/* CONTENT AREA */
@@ -199,6 +217,7 @@ body {
 		background: var(--light);
 		box-shadow: var(--box-shadow3);
 		border-radius: 3px;
+		a {display: block;}
 		img {
 			display: block;
 			border-top-left-radius: 3px;
@@ -206,9 +225,16 @@ body {
 			width: 100%;
 		}
 		&-body {
-			padding: .5rem;
-			h3 {
-				margin: 0;
+			a {
+				h3 {
+					padding: .5rem;
+					margin: 0;
+					color: var(--primary-color);
+				}
+				&:hover h3{
+					color: var(--light);
+					background: var(--primary-color);
+				}
 			}
 		}
 	}
@@ -256,6 +282,29 @@ body {
 	}
 }
 /* SIDEBAR */
+.cat { // turismo comunitario
+	position: relative;
+	text-align: right;
+	background: #fff;
+	display: flex;
+    align-items: center;
+	justify-content: space-around;
+	padding: .4rem 0 .2rem;
+	&-ico {
+		background: url(../images/turismo-comunitario.svg) no-repeat;
+		width: 40px;
+		height: 50px;
+		display: inline-block;
+		text-transform: uppercase;
+    	font-size: 1.1rem;
+	}
+	h3 {
+		margin: 0;
+		/* text-transform: uppercase;
+    	font-size: 1.1rem; */
+	}
+}
+
 .adds, .trip {
 	margin-top: 2rem;
 	position: relative;
@@ -279,7 +328,7 @@ body {
 			line-height: 2.1rem;
 		}
 		img {
-			width: 100%;
+			width: 100%!important;
 			display: block;
 		}
 		&:last-child {
@@ -515,6 +564,36 @@ footer {
 					font-size: 0.8rem;
 					margin-top: 0.5rem;
 				}
+			}
+		}
+	}
+}
+/* MENU CATEGORIZADO */
+.catNav {
+	background: #749536;
+	.emagrid {
+		padding: 0;
+	}
+	ul {
+		display: flex;
+		justify-content: space-evenly;
+		margin: 0;
+		padding: 0;
+		li {
+			list-style: none;
+			padding: .8rem 1.5rem;
+			text-align: center;
+			a {
+				color: #fff;
+			}
+			&:hover {
+				background: #a35a20;
+			}
+			@include from(530px) {
+				padding: .8rem 1rem;
+			}
+			@include from(405px) {
+				padding: .8rem .4rem;
 			}
 		}
 	}
